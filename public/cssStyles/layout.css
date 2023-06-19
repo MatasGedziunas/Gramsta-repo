@@ -1,0 +1,95 @@
+/* Reset styles for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font and font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Set header styles */
+.header {
+    height: 50px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Set main content styles */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100vh;
+}
+
+/* Set story section styles */
+.story {
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+/* Set post section styles */
+.feed {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Set post container styles */
+.feed-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* Set post styles */
+.post {
+    margin: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: calc(100% / 3 - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Set post header styles */
+.post-header {
+    height: 50px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Set post image styles */
+.post-image {
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Set post footer styles */
+.post-footer {
+    height: 50px;
+    background-color: #fafafa;
+    border-top: 1
+}

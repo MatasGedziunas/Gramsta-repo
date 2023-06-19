@@ -1,0 +1,36 @@
+.create_post_popUp{
+    position:fixed;
+    width: 70%;
+    margin-top: 30px;
+    left:20%;
+    top: 10%;
+}
+.create_post_popUp :not(.create_post_popUp, h2) {
+    margin-top: 25px;
+}
+
+
+.popupContainer
+{
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #e5dcdc
+}
+
+.createHeading{
+    text-align: center;
+
+}
+
+.addElement{
+    display:flex;
+    justify-content: center;
+}
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Remove the default underline */
+  }
