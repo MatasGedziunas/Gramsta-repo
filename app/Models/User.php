@@ -101,19 +101,19 @@ class User extends Authenticatable
         $follow = DB::table('follows')
         ->where('follows_id', $id)
         ->join('users', 'follows.follower_id', '=', 'users.id')
-        ->select('follows.*', 'users.name as followedName')
+        ->select('follows.*', 'users.name as followedName', 'users.id as followedNameID')
         ->get();
         $comment = DB::table('posts')
         ->where('user', $id)
         ->join('comments', 'posts.id', '=', 'comments.post_id')
         ->join('users', 'comments.user_id', '=', 'users.id')
-        ->select('posts.picture', 'users.name as commentUserId', 'comments.created_at', 'comments.comment')
+        ->select('posts.picture', 'users.id as commentUserId' , 'users.name as commentUserName', 'comments.created_at', 'comments.comment')
         ->get();
         $like = DB::table('posts')
         ->where('user', $id)
         ->join('likes', 'likes.post_id', '=', 'posts.id')
         ->join('users', 'likes.user_id', '=', 'users.id')
-        ->select('posts.picture', 'users.name as likeUserId', 'likes.created_at')
+        ->select('posts.picture','users.id as likeUserId' ,'users.name as likeUserName', 'likes.created_at')
         ->get();
         $events = collect($follow)->concat($comment)->concat($like); // Combine follow, comment, and like events into a single collection
         $sortedEvents = $events->sortBy('created_at');
